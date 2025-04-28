@@ -11,10 +11,15 @@ std::vector<char> WordtoList(std::string Input) {
     return CharList;
 }
 
-std::string ListtoWord(std::vector<char> OutputList) {
+std::string ListtoWord(std::vector<char> OutputList, int ifBacon) {
     std::string Output = "";
+
     for (char c : OutputList) {
         Output += c;
+    }
+    if (ifBacon == 2) {
+    for (int in; in < Output.size(); in += 4 )
+        Output.insert(in, " ");
     }
 
 return Output;
@@ -58,7 +63,7 @@ if (NumberedInput == 1) { // Caesar Cipher
          }
          index2++;
      }
-     std::cout << "Ciphered Text: " << ListtoWord(OutputList) << std::endl;
+     std::cout << "Ciphered Text: " << ListtoWord(OutputList, NumberedInput) << std::endl;
 }      
 
 if (NumberedInput == 2) { // Bacon Cipher
@@ -83,7 +88,7 @@ if (NumberedInput == 2) { // Bacon Cipher
             }
         }
     }
-    std::cout << "Bacon Ciphered Text:" << ListtoWord(OutputList) << std::endl;
+    std::cout << "Bacon Ciphered Text:" << ListtoWord(OutputList, NumberedInput) << std::endl;
     }
-   
+
 }
