@@ -18,7 +18,7 @@ std::string ListtoWord(std::vector<char> OutputList, int ifBacon) {
         Output += c;
     }
     if (ifBacon == 2) {
-    for (int in; in < Output.size(); in += 4 )
+    for (int in = 5; in < Output.size(); in += 6 )
         Output.insert(in, " ");
     }
 
@@ -88,7 +88,7 @@ if (NumberedInput == 2) { // Bacon Cipher
             }
         }
     }
-    std::cout << "Bacon Ciphered Text:" << ListtoWord(OutputList, NumberedInput) << std::endl;
+    std::cout << "Bacon Ciphered Text: " << ListtoWord(OutputList, NumberedInput) << std::endl;
     }
 
 }
